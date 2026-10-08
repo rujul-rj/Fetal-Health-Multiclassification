@@ -36,6 +36,29 @@ python src/generate_report.py
 
 The first command downloads the dataset from UCI, trains the models, evaluates them, and creates figures/results. The second creates the two-page PDF report from the actual experiment results.
 
+## Feature Analysis
+
+The experiment pipeline also performs Random Forest feature-importance analysis.
+The analysis ranks the 21 CTG features according to their contribution to the
+Random Forest model.
+
+The three highest-ranked features in the current experiment are:
+
+1. ASTV
+2. MSTV
+3. ALTV
+
+The analysis automatically generates:
+
+- `results/feature_importance.csv` — feature importance values
+- `results/feature_importance.png` — feature importance visualization
+
+Feature importance is generated automatically when running:
+
+```bash
+python src/run_experiments.py
+```
+
 ## Models
 Logistic Regression, Linear SVM, KNN, Decision Tree, Random Forest, Gradient Boosting, SVM, MLP, XGBoost, and LightGBM when available.
 
