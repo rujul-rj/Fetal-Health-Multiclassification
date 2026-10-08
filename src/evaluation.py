@@ -45,6 +45,14 @@ def evaluate(
         zero_division=0
     )
 
+    class_f1 = f1_score(
+        y_test,
+        predictions,
+        labels=[1, 2, 3],
+        average=None,
+        zero_division=0
+    )
+
     weighted_f1 = f1_score(
         y_test,
         predictions,
@@ -93,5 +101,8 @@ def evaluate(
         "Macro Precision": macro_precision,
         "Macro Recall": macro_recall,
         "Macro F1": macro_f1,
-        "Weighted F1": weighted_f1
+        "Weighted F1": weighted_f1,
+        "Normal F1": class_f1[0],
+        "Suspect F1": class_f1[1],
+        "Pathological F1": class_f1[2]
     }
