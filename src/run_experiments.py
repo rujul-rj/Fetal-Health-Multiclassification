@@ -12,7 +12,7 @@ from download_dataset import download_dataset
 from preprocessing import prepare
 from models import get_models
 from evaluation import evaluate
-
+from feature_analysis import analyze_feature_importance
 
 DATA = ROOT / "data" / "fetal_health.csv"
 RESULTS = ROOT / "results"
@@ -187,6 +187,9 @@ plt.savefig(
 
 plt.close()
 
+# Run feature importance analysis
+print("\nRunning feature importance analysis...")
+analyze_feature_importance()
 
 # Print final results
 print("\nFinal Model Results:")
