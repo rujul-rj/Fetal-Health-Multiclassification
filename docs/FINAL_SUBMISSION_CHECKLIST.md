@@ -14,6 +14,7 @@
 - [ ] Verify `results/model_results.csv`
 - [ ] Verify generated figures
 - [ ] Run `python src/generate_report.py`
+- [ ] Run `python src/generate_presentation.py`
 - [ ] Open the PDF and confirm it is two pages / appropriately concise
 - [ ] Confirm all report text is Helvetica and black
 - [ ] Update team contribution file
